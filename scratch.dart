@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 void main() {
   performTasks();
@@ -15,11 +14,12 @@ void task1() {
   print('Task 1 complete');
 }
 
-Future task2() async {
+
+Future<String> task2() async {
   Duration threeSeconds = Duration(seconds: 3);
   String result;
   await Future.delayed(threeSeconds, () {
-    String result = 'task 2 data';
+    result = 'task 2 data';
     print('Task 2 complete');
   });
 
